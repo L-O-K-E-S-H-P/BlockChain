@@ -32,7 +32,7 @@ contract Lottery
   function pickWinner() public payable
   {
     require(manager==msg.sender,"Only authorized Manager can access");
-    require(players.length>=2,"Players are less than 3");
+    require(players.length>=3,"Players are less than 3");
 
     uint r = random();
     uint index=r%players.length;
